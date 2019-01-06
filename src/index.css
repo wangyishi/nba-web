@@ -1,5 +1,6 @@
 @import 'styles/App.css';
 @import 'styles/TopBar.css';
+@import 'styles/ShortChart.css';
 
 body {
   margin: 0;
