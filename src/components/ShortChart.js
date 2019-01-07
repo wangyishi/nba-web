@@ -27,7 +27,7 @@ export class ShotChart extends React.Component {
 
       const courtSelection = d3.select("#shot-chart");
       const chart_court = court().width(500);
-      const chart_shots = shots().shotRenderThreshold(2).displayToolTips(true).displayType("hexbin");
+      const chart_shots = shots().shotRenderThreshold(1).displayToolTips(true).displayType("hexbin");
       courtSelection.call(chart_court);
       courtSelection.datum(final_shots).call(chart_shots);
     });
