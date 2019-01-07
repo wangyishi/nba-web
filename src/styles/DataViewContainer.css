@@ -1,8 +1,23 @@
 .data-view {
     width: 550px;
+    position: relative;
 }
 
 .filter-label {
     text-align: left;
     line-height: 37px;
+}
+
+.filters {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.filter-row {
+    padding-bottom: 20px;
+}
+
+.filter-control {
+    float: left;
 }

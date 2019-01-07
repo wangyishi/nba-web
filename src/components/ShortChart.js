@@ -1,3 +1,4 @@
+
 import React from 'react';
 import nba from 'nba';
 import * as d3 from 'd3';
@@ -11,11 +12,14 @@ export class ShotChart extends React.Component {
   static propTypes = {
     playerId: PropTypes.number.isRequired,
     minCount: PropTypes.number.isRequired,
+    chartType: PropTypes.string.isRequired,
+    displayTooltip: PropTypes.bool.isRequired,
   }
 
   componentDidUpdate() {
     nba.stats.shots({
-      PlayerID: this.props.playerId
+      PlayerID: this.props.playerId,
+      Season: '2016-17',
     }).then((response) => {
       console.log(response);
       const final_shots = response.shot_Chart_Detail.map(shot => ({
@@ -31,8 +35,8 @@ export class ShotChart extends React.Component {
       const chart_court = court().width(500);
       const chart_shots = shots()
         .shotRenderThreshold(this.props.minCount)
-        .displayToolTips(true)
-        .displayType("hexbin");
+        .displayToolTips(this.props.displayTooltip)
+        .displayType(this.props.chartType);
       courtSelection.call(chart_court);
       courtSelection.datum(final_shots).call(chart_shots);
     });
