@@ -1,8 +1,10 @@
+@import '~antd/dist/antd.css';
 @import 'styles/App.css';
 @import 'styles/TopBar.css';
 @import 'styles/ShortChart.css';
 @import 'styles/Profile.css';
 @import 'styles/Main.css';
+@import 'styles/DataViewContainer.css';
 
 body {
   margin: 0;
