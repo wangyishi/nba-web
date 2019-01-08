@@ -1,9 +1,11 @@
 .main {
+    margin-top: 70px;
+}
+
+.player {
     display: flex;
     width: 750px;
-    margin-right: auto;
-    margin-left: auto;
-    margin-top: 70px;
+    margin: auto;
     border: 3px solid #ccc;
     box-shadow: 5px 10px 10px #888;
     border-radius: 10px;
